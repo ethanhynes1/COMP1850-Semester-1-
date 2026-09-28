@@ -1,2 +1,2 @@
 # About Me
-*Name* Ethan 
+> Name: Ethan 
