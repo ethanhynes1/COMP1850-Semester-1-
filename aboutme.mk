@@ -1,1 +1,2 @@
-#Heading 
+#About Me
+*Name* Ethan git 
