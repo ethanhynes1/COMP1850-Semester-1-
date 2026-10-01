@@ -11,7 +11,7 @@ You can complete this task on the worksheet pdf if you prefer.
 |     Command                 |     Explanation    |
 |-----------------------------|--------------------|
 |     pwd                     | shows the current location of the terminal |
-|     ls                      | |
+|     ls                      | shows all h
 |     cd directory_name       | |
 |     cd ..                   | |
 |     cd -                    | |

@@ -3,15 +3,15 @@
 
 user_string = input("Enter a string: ")
 
-print(f"\nOriginal String: {user_string}")
-print(f"Modified String 1: {user_string.lower()}")
-print(f"Modified String 2: {user_string.upper()}")
-print(f"Modified String 3: {user_string.strip()}")
-print(f"Modified String 4: {user_string.replace('a', '@')}")
-print(f"Modified String 5: {user_string.capitalize()}")
-print(f"Modified String 6: {user_string[::-1]}")
-print(f"Modified String 7: {user_string.title()}")
-print(f"Modified String 8: {len(user_string)}")
+print(f"\nOriginal String: {user_string}") #Shows the initially entered string 
+print(f"Modified String 1: {user_string.lower()}") # All in lower case 
+print(f"Modified String 2: {user_string.upper()}") # All in upper case
+print(f"Modified String 3: {user_string.strip()}") # Removes whitespaces 
+print(f"Modified String 4: {user_string.replace('a', '@')}") # Replaces all a with @
+print(f"Modified String 5: {user_string.capitalize()}") # Capitalise first letter 
+print(f"Modified String 6: {user_string[::-1]}") # Reverse the stringt 
+print(f"Modified String 7: {user_string.title()}") # Every word is capitalised
+print(f"Modified String 8: {len(user_string)}") # returns the length of the string 
 print(f"Modified String 9: {user_string.find('a')}")
 print(f"Modified String 10: {user_string.count('a')}")
 print(f"Modified String 11: {user_string.startswith('Hello')}")
