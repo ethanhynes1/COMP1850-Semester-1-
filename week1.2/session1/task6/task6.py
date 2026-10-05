@@ -17,7 +17,7 @@ music_database = {
 
 
 # Pretty-print the data structure
-#pprint(music_database)
+pprint(music_database)
 
 # Display details of one album recorded by a specific artist
 print(music_database.get("Bleech 9:3"))
