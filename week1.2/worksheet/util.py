@@ -11,6 +11,9 @@ def read_numbers():
     Returns a list of float values corresponding to the numbers that were
     input by the user.
     """
+
     line = input("Enter some numbers, separated by spaces: ")
     numbers = [float(item) for item in line.split()]
     return numbers
+
+    
