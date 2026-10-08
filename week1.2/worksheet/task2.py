@@ -36,6 +36,5 @@ try:
 
 except:
     
-    print("Error: no numbers provided")
-    sys.exit()
+    sys.exit("Error: no numbers provided")
 
