@@ -14,4 +14,4 @@ if num <= 100 and num >= 0:
 else:
     sys.exit("Error: Grade must be an integer between 0 and 100")
 
-print(f'{num} is a {result})
+print(f'{num} is a {result}')
