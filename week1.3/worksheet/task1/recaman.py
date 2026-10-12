@@ -8,9 +8,15 @@ L = int(input("Length of sequence: ")) # this should be your only input
 
 sequence = [0]
 
-for i in range(1,L):
+for i in range(1,L+1):
 
-    
+    prev = sequence[(len(sequence))-1]
+
+    if (prev - i) > 0 and (prev - i) not in sequence:
+        sequence.append(prev - i)
+
+    else:
+        sequence.append(prev + i) 
 
 # You may wish to use further output for testing purposes while you develop your code
 
