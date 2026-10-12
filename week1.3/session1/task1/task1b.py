@@ -8,5 +8,6 @@ while fruit:
 
 
 # Why does this work?
+#Because the loop contains values so it considered True
 
 # What features of Python does it rely on?
