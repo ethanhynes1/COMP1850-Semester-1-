@@ -3,7 +3,14 @@
 
 # Prompt the user for their name, age, and favorite colour.
 
+Age = input("Age")
+
+
 # Open a file called 'user_info.txt' for reading
+
+with open ('user_info.txt', "w") as file:
+    file.write(f"{Age}\n")
+
 
 # Write each piece of information to the file, each on a new line.
 

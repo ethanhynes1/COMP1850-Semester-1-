@@ -2,12 +2,18 @@
 
 # We want to read in a text file, and calculate how many words are in it. 
 # You can use any of the .txt files to test this - or even make your own.
-
+count = 0
 # open and read the file
+with open("week1.3/session2/task2/1_word_counter/glasses.txt", "r") as file:
+    for line in file:
+        for word in line.split():
+            count += 1
 
 # calculate the number of words
 # hint: you could use .split() to break up by spaces
 # hint: watch out for empty lines that might give you empty strings
+
+print(count)
 
 # display the wordcount
 

@@ -8,6 +8,19 @@
 #   - average sale amount
 #   - the widget which has been sold the most
 # and print these out in a nice, human-readable format
+largest_sale = 0 
+average = 0 
+A = 0
+B = 0
+C = 0
+D = 0
+
+
+with open("week1.3/session2/task2/3_sales_data/sales.csv", "r") as file:
+    for line in file:
+        
+        data = line.strip().split(",")
+        
 
 
 # additional: you can calculate other sales statistics such as:
