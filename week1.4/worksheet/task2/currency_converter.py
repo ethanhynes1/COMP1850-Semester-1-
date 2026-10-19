@@ -20,8 +20,20 @@ def currency_converter(amount, from_currency, to_currency):
 
     # your code here
 
+    if amount <= 0:
+        return 0
+
+    else:
+        rates = conversion_rate[from_currency]
+        spec_rate = rates[to_currency]
+        return amount * spec_rate
+    
+
+
     return None
+
 
 # Submit only this file currency_converter.py with the completed function.
 
 # Remove any additional code you may have added during development and testing.
+#print(currency_converter(50, 'GBP', 'PHP'))
