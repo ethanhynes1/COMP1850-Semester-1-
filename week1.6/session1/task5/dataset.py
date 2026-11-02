@@ -42,10 +42,22 @@ class QuakeDataset:
         # each dictionary and convert them into the required types before
         # creating a Quake object and storing it in the list.
 
+        self.data.clear()
+        for info in self.feed.reader():
+            time = datetime.fromisoformat(info['time'])
+            lon = float(info['longitude'])
+            lat = float(info['latitude'])
+            depth = float(info['depth'])
+            mag = float(info['mag'])
+            self.data.append(Quake(time, lon, lat, depth, mag))
+
+        
+
     def __len__(self):
         """
         Returns the size of this dataset.
         """
+        return len(self.data)
         # Write code here that returns the number of quakes downloaded
 
     def __str__(self):
@@ -71,6 +83,8 @@ class QuakeDataset:
         """
         # Write code here that computes the mean magnitude of all the
         # quakes currently in the dataset
+        if len(self.data) == 0:
+                    raise QuakeDatasetError("dataset is empty")
 
     def shallowest_quake(self):
         """
@@ -91,3 +105,11 @@ class QuakeDataset:
         """
         # Write code here that finds and returns the strongest quake
         # (i.e., the one with the largest magnitude)
+        if len(self.data) == 0:
+            raise QuakeDatasetError("dataset is empty")
+        
+        strongest = self.data[0]
+        for quake in self.data[1:]:
+            if quake.magnitude > quake.magnitude:
+                strongest = quake
+        return strongest
