@@ -10,31 +10,42 @@ class Person:
 
     def __init__(self, name, birth):
 
-
+        """
+        Initialises the person class
+        """
         if type(name) != str:
             raise TypeError
 
         elif name == "":
             raise ValueError
 
-        elif birth != datetime.strptime(birth, "%Y-%m-%d"):
-            print("yes")
-            raise ValueError
+        if not isinstance (birth, date):
+            raise TypeError("Birth date must be in the format YYYY-MM-DD.")
+
 
         
 
         self.name = name
         self.birth = birth
 
-    def initials(self):
 
-        initials = "".join(word.name[0].upper for word in self.name.split())
+    def initials(self):
+        """
+        Returns initials
+        """
+
+        initials = "".join(word[0].upper() for word in self.name.split())
         return initials 
 
     def is_birthday(self):
-
+        """
+        Returns true if it is their birthday
+        """
         if self.birth.strftime("%m-%d") == date.today().strftime("%m-%d"):
             return True
+
+        else:
+            return False
 
 
 
@@ -44,4 +55,3 @@ class Person:
     # Implement methods initials() and is_birthday() here
     # (see README.md for further details)
 
-p = Person("Ethan", "2007-11-09")
