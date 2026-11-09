@@ -48,6 +48,7 @@ class Circle:
         """
         self.radius = radius
         self.centre = centre
+        print(self.centre)
 
     def area(self):
         """
