@@ -3,7 +3,7 @@ import httpx
 import pandas as pd
 import matplotlib.pyplot as plt
 
-api_key="U6KXJTZC2E8VGH39PD7UMG4BZ"   # your API key
+api_key="46U3LKDNS5TBYGXAPU8PRCCTN"   # your API key
 
 city="Leeds"     # city location
 country="UK"     # country location
@@ -18,9 +18,9 @@ url = base + city + "," + country + "?key=" + api_key + "&" + elements
 
 # http request
 response = httpx.get(url)
-
+if response.status_code != 200:
+    quit()
 # status code (should be checked)
-print(response.status_code)
 
 # json data
 data = response.json()
